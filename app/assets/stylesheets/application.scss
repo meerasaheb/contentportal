@@ -1,0 +1,61 @@
+@import "materialize";
+form {
+    input {
+    z-index: 1;
+  }
+  label {
+      z-index: -1;
+  }
+}
+nav ul a{
+	font-size: 2.1rem !important;
+	padding: 0px 54px !important;
+}
+.row .col.offset-s1{
+	    margin-left: 0px !important ;
+}
+.left{
+	// display:none;
+	margin-left: 1em;
+}
+.row {
+
+    margin-top: 2rem !important;
+    }
+.render{
+	display: none;
+}
+.border{
+
+    border: 1px solid grey;
+
+}
+// #render-form{
+//       width: 80%;
+//     margin-left: 8em;
+
+// }
+// .newform{
+//       width: 80%;
+//     margin-left: 8em;
+
+// }
+#width {
+    float: right;
+        margin-right: 3.5em;
+  }
+  .row .col.s12 {
+    // width: 90% !important;
+  }
+  // #subject_name{
+  //   height: 0px !important;
+  // }
+ .submit-button{
+  font-size: 22px;
+ }
+
+ .collapsible li.active i {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}

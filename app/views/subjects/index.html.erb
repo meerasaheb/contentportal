@@ -1,0 +1,30 @@
+
+<%= render 'form', subject: @subject %>
+<%= @subjects.each  do |subject| %>
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header"><i class="material-icons "> chevron_right </i><h3><%= subject.name %></h3></div>
+    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  </li>
+  <li
+<% end %>
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+      <div class="collapsible-header">
+       <i class="material-icons">expand_less</i>First</div>
+   </li>
+   <li>
+      <div class="collapsible-header">
+       <i class="material-icons">expand_less</i>Second</div>
+   </li>
+</ul>
+
+<p id="click_advance"><i class="icon-circle-arrow-down"></i> Advanced search</p>
+<div id="display_advance">
+    <p>This is the advance search</p>
+</div>
+
+<!-- $('.ccollapsible-header').click(function(){
+$('#collapsible-body').toggle('1000');
+$(this).html('<i class="icon-circle-arrow-down"></i>');
+}); -->
