@@ -1,30 +1,80 @@
+<!-- <div class = "header">
+<div class="row">
+    <div class="col s1 offset-s1">
+      <h4>Subject</h4>
+    </div>  
+    <div class="col s4 offset-s6">
+         <h4 class ="left">NewSubject</h4>
+          <a class ="right btn-floating btn-large waves-effect waves-light red" id="add-button"><i class="material-icons">add</i></a>
+    </div>
+ </div>
+ </div>
+ -->
+ <div class = "from">
+         <div class="card-panel">
+          <div class ="newsubject">
+           <div class="row">
+              <div class="col s6">
+             <h4 class="col l3 offset-l1">SUBJECTS</h4>
+            </div>
+    <div class="col l2 offset-l4">
+    <h4 class="left">New Subject</h4>
+    <a class="add-button left btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+    </div>
+</div>
+</div>
+</div>
+  
 
-<%= render 'form', subject: @subject %>
-<%= @subjects.each  do |subject| %>
-<ul class="collapsible" data-collapsible="accordion">
-  <li>
-    <div class="collapsible-header"><i class="material-icons "> chevron_right </i><h3><%= subject.name %></h3></div>
-    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-  </li>
-  <li
-<% end %>
-<ul class="collapsible" data-collapsible="accordion">
-  <li>
-      <div class="collapsible-header">
-       <i class="material-icons">expand_less</i>First</div>
-   </li>
-   <li>
-      <div class="collapsible-header">
-       <i class="material-icons">expand_less</i>Second</div>
-   </li>
-</ul>
+ <div class ="renderform" id ="render-form"> 
+ <div> 
+   <%= render 'form', subject: @subject %>
+   </div>
+     <% @subjects.each  do |subject|  %>
 
-<p id="click_advance"><i class="icon-circle-arrow-down"></i> Advanced search</p>
-<div id="display_advance">
-    <p>This is the advance search</p>
+     <%= form_for @subject do |f| %>
+
+
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>    
+              <div class="collapsible-header"><i class="material-icons">chevron_right</i>
+              <h3><%= subject.name %>
+                 <div class ="two">
+                <%= link_to "mode_edit",subject,:class => "fixed-action-btn horizontal large material-icons" ,id:"edit"%>
+                <%= link_to "delete",subject,method: :delete, :class => "fixed-action-btn horizontal large material-icons" ,id:"delete" %>
+                </div>
+                 </h3></div>
+            <div class="collapsible-body">
+            <div class = "insideform  ">
+            <h5 class= "left">New Strand</h5>
+            <!-- <div class ="btn-floating btn-large waves-effect waves-light blue" id="button">
+                     <%= f.submit '+',class:"material-icons",id:"insidesubmit" %>
+    
+                    </div> -->
+                    <div class ="">
+                     <a class="left btn-floating btn-large waves-effect waves-light blue"><i class="material-icons" id="insidesubmit">add</i></a>
+                     </div>
+                   
+               
+      </div>
+          <div class ="insideform" id ="indside-form">
+                    <div>
+                   <%= render 'subjects/subjecttopics/form1' %>
+                     </div> 
+                     </div>
+
+                    <p>wda</p>
+                    <p>wda</p>
+                    <p>wda</p>
+                    <p>wda</p>
+
+                </div>
+
+       </li>
+    </ul>
+  <% end %>
+    <% end %>
+ </div> 
 </div>
 
-<!-- $('.ccollapsible-header').click(function(){
-$('#collapsible-body').toggle('1000');
-$(this).html('<i class="icon-circle-arrow-down"></i>');
-}); -->
+

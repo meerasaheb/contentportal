@@ -2,7 +2,7 @@ class SubjectsController < ApplicationController
   def index
    @subjects = Subject.all
    @subject = Subject.new
-
+    @subjecttopic = Subjecttopic.new
   end
 
   def new
@@ -23,15 +23,16 @@ class SubjectsController < ApplicationController
   end
 
   def edit
+    @subjects = Subject.all
      @subject = Subject.find(params[:id])
   end
 
   def update
      @subject = Subject.find(params[:id])
      if @subject.update(subject_params)
-      redirect_to @subject
-    else
-       render :edit 
+      redirect_to subjects_url
+    # else
+    #    render :subjects_url
     
   end
   end

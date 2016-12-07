@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  literature: MyString
+  leteracy: MyString
+  grammar: MyString
+  subject: one
+
+two:
+  literature: MyString
+  leteracy: MyString
+  grammar: MyString
+  subject: two

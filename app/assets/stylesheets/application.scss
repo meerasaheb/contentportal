@@ -11,51 +11,118 @@ nav ul a{
 	font-size: 2.1rem !important;
 	padding: 0px 54px !important;
 }
-.row .col.offset-s1{
-	    margin-left: 0px !important ;
-}
-.left{
-	// display:none;
-	margin-left: 1em;
-}
-.row {
 
-    margin-top: 2rem !important;
-    }
-.render{
-	display: none;
-}
 .border{
 
     border: 1px solid grey;
 
 }
-// #render-form{
-//       width: 80%;
-//     margin-left: 8em;
-
+// .new_subject{
+//   display:none;
 // }
-// .newform{
-//       width: 80%;
-//     margin-left: 8em;
 
-// }
 #width {
     float: right;
         margin-right: 3.5em;
   }
-  .row .col.s12 {
-    // width: 90% !important;
-  }
-  // #subject_name{
-  //   height: 0px !important;
-  // }
- .submit-button{
-  font-size: 22px;
- }
+   .card-panel {
+    /* transition: box-shadow .25s; */
+    /* padding: 20px; */
+     // margin: 0.5rem 0 1rem 0 !important;
+    /* border-radius: 2px; */
+    background-color: #fff;
+    // border: 1px solid grey;
+    width: 94%;
+    margin: 0 0 0 4em !important                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+}
+ 
 
  .collapsible li.active i {
   -ms-transform: rotate(180deg); /* IE 9 */
   -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
   transform: rotate(180deg);
 }
+
+
+.fixed-action-btn {
+      position: initial !important;
+  
+}
+#edit{
+      padding-right: 2em;
+    width: 12%;
+    float: right;
+    font-size: 1em;
+}
+#delete{
+          font-size: 1em;
+    padding-right: 2em;
+}
+.two{
+      padding-right: 2.1em;
+    float: right;
+    width: 0%;
+     }
+
+#submit
+  {
+    width: 40px;
+  
+    font-size: 2em;
+
+    // padding-top: 0.3em;
+  }
+.fields{
+  border: 1px solid grey;
+    width: 94%;
+    margin-left: 4em;
+
+}
+#subjectfields{
+  width:93%;
+  margin-left: 1.5em;
+  }
+.row {
+      margin-bottom: 0px;
+    }
+.newsubject{
+  border-bottom: 2px solid grey;
+
+  }
+.row .col.offset-l1 {
+     margin-left: 0px; 
+}
+#subjectbutton{
+      width: 40px;
+    height: 44px;
+}
+.collapsible {
+    border-top: 1px solid grey;
+    /* border-right:0px */
+    /* border-left: 1px solid #ddd; */
+    margin: 0 0 0 4em;
+    width: 94%;
+    
+}
+.renderform{
+  display:none;
+}
+#button{
+      width: 43px;
+    height: 40px;
+    margin-left:2em;
+}
+// h3{
+//   font-size: 1em;
+// }
+.insideform{
+  margin-top:2em;
+    width: 15%;
+    float: right;
+  }
+  // #insidesubmit{
+    
+  //      margin-top: -1em;
+  //   // padding-top: -4px;
+  //   font-size: 2.5em;
+  // }
