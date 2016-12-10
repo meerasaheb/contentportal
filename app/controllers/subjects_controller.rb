@@ -1,19 +1,23 @@
 class SubjectsController < ApplicationController
+    before_action :set_subject, only: [:show, :edit, :update, :destroy]
   def index
    @subjects = Subject.all
    @subject = Subject.new
-    @subjecttopic = Subjecttopic.new
+   @topics = Topic.new
   end
 
   def new
+    @subject = Subject.new
+    # @subject.topics.build
     end
 
   def show
-     @subject = Subject.find(params[:id])
+     
   end
 
   def create
      @subject = Subject.new(subject_params)
+     byebug
      if @subject.save
       redirect_to subjects_url
     else
@@ -23,17 +27,20 @@ class SubjectsController < ApplicationController
   end
 
   def edit
-    @subjects = Subject.all
-     @subject = Subject.find(params[:id])
+    
+       # @subject = Subject.find(params[:id])
+    
+     # redirect_to subjects_url
   end
 
   def update
-     @subject = Subject.find(params[:id])
-     if @subject.update(subject_params)
+    # @subject = Subject.find(params[:id])
+           byebug
+      if @subject.update(subject_params)
+
       redirect_to subjects_url
-    # else
-    #    render :subjects_url
-    
+    else
+       render :index
   end
   end
 
@@ -44,6 +51,9 @@ class SubjectsController < ApplicationController
 
   end
   private
+   def set_subject
+    @subject = Subject.find(params[:id])
+    end
   def subject_params
     params.require(:subject).permit(:name)
   end

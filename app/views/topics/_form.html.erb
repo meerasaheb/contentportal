@@ -1,0 +1,12 @@
+<%= form_for @topics do |f| %>
+<div class = "topicform">
+
+<!-- # :url=>{:action =>'update',:id => @subject,:controller => "subjects"} do |f| %> -->
+<%= f.text_field :name ,id:"topicfields" %>
+<%= f.hidden_field :subject_id ,:value => subject.id%>
+ <div class ="submit btn-floating btn-large waves-effect waves-light blue" id="topicbutton">
+  <%= f.submit '+',class:"material-icons",id:"submit" %>
+  	
+  </div>
+  </div>
+  <% end %> 

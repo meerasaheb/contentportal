@@ -49,19 +49,26 @@ nav ul a{
   
 }
 #edit{
-      padding-right: 2em;
+      padding-right: 1em;
     width: 12%;
-    float: right;
-    font-size: 1em;
+    float: left;
+    font-size: 3em;
+}
+#fieldedit{
+      padding-right: 1em;
+    width: 12%;
+    float: left;
+    font-size: 3em;
 }
 #delete{
-          font-size: 1em;
-    padding-right: 2em;
+         float:right;
+         font-size: 3em;
+    // padding-right: 2em;
 }
 .two{
-      padding-right: 2.1em;
-    float: right;
-    width: 0%;
+      // padding-right: 2.1em;
+    float: left;
+    // width: 0%;
      }
 
 #submit
@@ -93,7 +100,7 @@ nav ul a{
      margin-left: 0px; 
 }
 #subjectbutton{
-      width: 40px;
+    width: 40px;
     height: 44px;
 }
 .collapsible {
@@ -115,14 +122,57 @@ nav ul a{
 // h3{
 //   font-size: 1em;
 // }
-.insideform{
-  margin-top:2em;
-    width: 15%;
-    float: right;
+// .insideform{
+//   margin-top:2em;
+//     width: 15%;
+//     float: right;
+//   }
+ 
+#subjects{
+       font-size:2.3em;
   }
-  // #insidesubmit{
+  .newstrand{
+        margin-top: 1em;
+float: right;
+    margin-right: 5em;
+  }
+  .forminside
+  {
+    display:none;
+  }
+//child topics
+#strand{
+   width: 40px;
+    height: 44px;
+    margin-top: 0px;
+}
+#add-field{
+    // line-height: 44px;
+    line-height: 44px !important;
+    /* width: 40px; */
+    font-size: 2em;
+  }
+
+.topicform{
+      border: 1px solid grey;
+    width: 76%;
+    margin-left: 4em;
+   
+ }
+  #topicfields{
+      width: 89%;
+    margin-left: 1.5em;
+  }
+  #topicbutton{
+        margin-left: 3em;
     
-  //      margin-top: -1em;
-  //   // padding-top: -4px;
-  //   font-size: 2.5em;
-  // }
+    width: 40px;
+    height: 44px;
+    margin-top: 1em;
+  }
+
+  #subjectfont{
+    font-size:2em;
+  }
+  
+ 

@@ -10,7 +10,7 @@
  </div>
  </div>
  -->
- <div class = "from">
+ <!-- <div class = "from"> -->
          <div class="card-panel">
           <div class ="newsubject">
            <div class="row">
@@ -21,9 +21,9 @@
     <h4 class="left">New Subject</h4>
     <a class="add-button left btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
     </div>
-</div>
-</div>
-</div>
+    </div>
+     </div>
+  </div>
   
 
  <div class ="renderform" id ="render-form"> 
@@ -32,49 +32,105 @@
    </div>
      <% @subjects.each  do |subject|  %>
 
-     <%= form_for @subject do |f| %>
+     
 
 
       <ul class="collapsible" data-collapsible="accordion">
         <li>    
               <div class="collapsible-header"><i class="material-icons">chevron_right</i>
-              <h3><%= subject.name %>
-                 <div class ="two">
-                <%= link_to "mode_edit",subject,:class => "fixed-action-btn horizontal large material-icons" ,id:"edit"%>
-                <%= link_to "delete",subject,method: :delete, :class => "fixed-action-btn horizontal large material-icons" ,id:"delete" %>
-                </div>
-                 </h3></div>
-            <div class="collapsible-body">
-            <div class = "insideform  ">
-            <h5 class= "left">New Strand</h5>
-            <!-- <div class ="btn-floating btn-large waves-effect waves-light blue" id="button">
-                     <%= f.submit '+',class:"material-icons",id:"insidesubmit" %>
-    
-                    </div> -->
-                    <div class ="">
-                     <a class="left btn-floating btn-large waves-effect waves-light blue"><i class="material-icons" id="insidesubmit">add</i></a>
-                     </div>
-                   
+              
                
-      </div>
-          <div class ="insideform" id ="indside-form">
-                    <div>
-                   <%= render 'subjects/subjecttopics/form1' %>
-                     </div> 
-                     </div>
+              <%= form_for @subject ,:url => {:action => 'update',:id => subject,:controller=> 'subjects'}, method: :put do |f| %>
+                <div class ="row">
+               <div class = "col l10 offset-l1">
+               <div id ="editsubject">
+               
+               <%= f.text_field :name ,:value=> subject.name ,id:"subjectfont" %>
+               <%= f.hidden_field :subject_id ,:value => subject.id%>
+                
+                  </div>
+                 </div>   
 
-                    <p>wda</p>
-                    <p>wda</p>
-                    <p>wda</p>
-                    <p>wda</p>
-
+                 
+                 <!-- <div class = "edit-parent">
+                 <div class = "edit-child"> -->
+                 <div class="two">
+                 <a id="edit" class = "fixed-action-btn horizontal large material-icons"> mode_edit</a>
+               <%#= link_to "mode_edit",subject,method: :put,remote: true,:class => "fixed-action-btn horizontal large material-icons" ,id:"edit"%> 
+                <%= link_to "delete",subject,method: :delete, :class => "fixed-action-btn horizontal large material-icons" ,id:"delete" %>
+               
+                
+              
+                 </div> 
                 </div>
+                <% end %>
+               
+                
+                   </div>
+              
+            <div class="collapsible-body">
 
+             <div class = "insideform"> 
+             <div class="row">
+             <div class="col l7 offset-l4">
+             <div class ="newstrand">
+             <h5 class="left">New Strand</h5>
+                   <a class="insidesubmit left  btn-floating btn-large waves-effect waves-light blue" id="strand"><i class="material-icons" id= "add-field">add</i></a>
+               
+                     </div>
+                     </div>
+                      </div>
+                      
+                       
+                     
+                        <div class ="forminside" id ="form-inside"> 
+                        
+                     <%= render :partial =>'topics/form', :locals => {:subject => subject }%>
+                       
+                       </div> 
+                       
+                    
+                   
+                    
+
+                    <% subject.topics.each do |topic| %>
+                         <%= form_for @topics ,:url => {:action => 'update',:id => subject,:controller=> 'topics' } ,method: :put do |f| %>
+
+                         <div class= "row">
+                         <div class ="col s8 offset-s1">
+                         <div id ="editfield">
+                          <div id ="select"> 
+                        <%= f.text_field :name,:value=> topic.name,id:"disabled",:disabled => true %>
+                        <%= f.hidden_field :subject_id ,:value => subject.id%>
+                        </div>
+                        </div>
+                        </div>
+                          <div class="two">
+                             <%= link_to "mode_edit",topic,method: :put, remote: true,:class => " edit fixed-action-btn horizontal large material-icons" ,id:"fieldedit"%>
+                            <%= link_to "delete",topic, method: :delete, :class => "fixed-action-btn horizontal large material-icons" ,id:"delete" %>
+               
+                        </div>
+                        </div>
+                        
+                      
+                  <% end %>
+
+                      <% end %> 
+                      
+                      
+                     <!-- <p>sdf</p>         -->
+                  
+                </div>
+                </div>
+             
        </li>
     </ul>
   <% end %>
-    <% end %>
- </div> 
-</div>
+  </div>
+  <!-- </div> -->
+
+
+
+
 
 
